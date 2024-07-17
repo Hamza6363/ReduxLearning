@@ -2,6 +2,8 @@ import React from 'react'
 import Iphone from '../assets/Iphone.jpg'
 
 function Home(props) {
+    // props come from HomeContainer
+    console.log("home", props);
     return (
         <div>
 
@@ -19,7 +21,7 @@ function Home(props) {
                     </span>
                 </div>
                 <div className="btn-wrapper item">
-                    <button>
+                    <button onClick={()=>props.addToCartHandler({price: 1000, name: "Iphone 11 pro max"})}>
                         Add To Cart</button>
                 </div>
             </div>
